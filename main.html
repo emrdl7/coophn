@@ -1,0 +1,428 @@
+﻿<%@ page import="com.infomind.wp.plugin.popup.service.WpPopupService" %>
+<%@ page import="org.springframework.web.context.WebApplicationContext" %>
+<%@ page import="com.sun.org.apache.regexp.internal.RE" %>
+<%@ page import="org.springframework.web.servlet.support.RequestContextUtils" %>
+<%@ page import="com.infomind.wp.plugin.popup.vo.WpPopup" %>
+<%@ page import="java.util.List" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<%@ taglib prefix="wp" uri="http://infomind.com/wp" %>
+<%@ taglib prefix="info" uri="http://infomind.com/info" %>
+
+<script type="text/javascript">
+
+    $(document.body).ready(function () {
+
+
+         //'EAAFPi3wM88oBAOCqn1auc5MYO981pmajfDv0jtCasSO29P5U0c9JJaoHDC1KKxZBimBgk4XSrUd2sV1ZAHJzCKLprZCxBllzT3eth501L5IWaZAke2KpA3k4JGI6KFi8mMKjnOxe0QicPJz4M9TIxZA6aEEVECeYZD';
+        var token ='EAAFPi3wM88oBABwBTplM8IMaVxDsU5axAuCMnTmPZAOQQkHZCMosmHH38poEJWypZCRitrxMhqnIyeVMzeMJvvjZABINp6wmtSU0rB8c1sZBqZAWloTeLdoBw19jjVSqTb57ZCCBx7SxIrZBL1I0FTeF6DLAIE9ZA9bxDnx3Ci40ygQZDZD';
+
+
+
+        var fb_api_html = "";
+        var tokenUrl='https://graph.facebook.com/oauth/access_token?client_id=368935476982730&client_secret=790329ef6a40c8536b8f57b9771c9a4e&grant_type=client_credentials'
+
+
+        $.ajax({
+//                url:"https://graph.facebook.com/v2.8/2308264439246328/feed?access_token=" + token+ "&fields=link,picture,message,updated_time&limit=3", 2454649581244426  ,1739149749690046
+//c2f6b51927ba1d9472d78183b7c629d5  ,790329ef6a40c8536b8f57b9771c9a4e  1772996422966867,368935476982730
+//1739149749690046  ,2454649581244426
+            url:tokenUrl,
+            type:"GET"
+            , success:function(response){
+//                        console.log('1',response);
+//                        console.log('1',response.access_token);
+                //              token =response.access_token;   
+                $.ajax({
+                    url:"https://graph.facebook.com/v2.8/1739149749690046/feed?access_token=" + token+ "&fields=link,picture,message,updated_time&limit=3",
+                    type:"GET", success:function(response){
+//                            console.log('2',response)
+
+                        for(var i=0; i<response.data.length;i++){
+
+                            var title =response.data[i]['message'];
+                            if(typeof title == "undefined"){
+
+                                    title="......";
+                            }
+
+
+                            fb_api_html += "<li>";
+
+                            if (response.data[i]['link']) {
+                                fb_api_html += "<a href='"+response.data[i]['link']+"' target='_blank'>";
+                            }else{
+
+                                fb_api_html += "<a href='/'>";
+                            }
+                            if (response.data[i]['picture']) {
+                                fb_api_html += "<img src='" + response.data[i]['picture'] + "'   alt='페이스북 입니다' />";
+                            }else{
+
+                                fb_api_html += "<img src='/sources/images/noimg.png' alt='페이스북 입니다'>";
+                            }
+
+                            fb_api_html +="<p>" +title+"</p>";
+
+                            fb_api_html +="<i>" +response.data[i]['updated_time']+"</i>";
+                            fb_api_html +="</a>";
+                            fb_api_html +="</li>";
+                        }
+
+                        $("#faceBookFeed").html(fb_api_html);
+
+                    }, error:function(request,status,error){
+                        console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                    }
+                });
+            }, error:function(request,status,error){
+                console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+            }
+        });
+
+
+
+        function viewMode() {
+            if ($(window).width() < 1200) {
+                $(".main-slider div").each(function () {
+                    var u = $(this).data('mobile_image_url');
+                    var txt1 = $(this).find("img").attr("src", u);
+                });
+
+            } else {
+                $(".main-slider div").each(function () {
+                    var u = $(this).data('pc_image_url');
+                    var txt1 = $(this).find("img").attr("src", u);
+                });
+            }
+        }
+
+        viewMode();
+
+        $(window).resize(function () {
+            viewMode();
+        });
+
+
+    });
+</script>
+
+<%
+    WebApplicationContext ctx = RequestContextUtils.findWebApplicationContext(request);
+    WpPopupService popupService = ctx.getBean(WpPopupService.class);
+    WpPopup popup = new WpPopup();
+    popup.setPop_group("main");
+    popup.setPop_use_yn("Y");
+    List<WpPopup> popupList = popupService.selectList(popup);
+    request.setAttribute("popupList", popupList);
+%>
+
+<!-- S:mainContent -->
+<div id="content" class="main" tabindex="-1">
+    <a name="contentanker"></a>
+    <section class="main-issue">
+        <h2 class="sr-only">메인 이슈이미지 슬라이더</h2>
+
+        <div class="main-slider">
+            <c:forEach items="${popupList}" var="item">
+                <c:forEach items="${item.pop_pc_image_list}" var="image">
+
+                    <div data-pc_image_url="${image.realViewUrl}"
+                         data-mobile_image_url="${item.pop_mobile_image_list[0].realViewUrl}">
+                        <a href="">
+                            <img
+                                    src="${image.realViewUrl}"
+                                    alt="따뜻한 겨울, 가능성에 날개를 달다">
+                        </a>
+                    </div>
+                </c:forEach>
+
+            </c:forEach>
+        </div>
+
+        <button class="main-prev" title="다음슬라이드"><i class='bx bx-chevron-left'></i>이전슬라이드</button>
+        <button class="main-next" title="이전슬라이드"><i class='bx bx-chevron-right'></i>다음슬라이드</button>
+
+
+
+    </section>
+
+
+    <section class="main-links">
+        <div class="container">
+            <h2 class="sr-only">바로가기 링크</h2>
+
+            <a href="/front/menu/MENU000000000000034/" title="사회적협동조합">사회적<span>협동조합</span></a>
+            <a href="/front/menu/MENU000000000000055/" title="희망나래일터">희망나래<span>일터</span></a>
+            <a href="/front/menu/MENU000000000000060/" title="희망나래활동센터">희망나래<span>활동센터</span></a>
+
+            <a href="/front/menu/MENU000000000000065/" title="희망나래공동체">희망나래<span>공동체</span></a>
+            <a href="http://www.dongbaek.kr/" target="_blank" title="새창으로 열립니다">제주시동백<span>주간활동센터</span></a>
+
+            <a href="http://www.jejucc.or.kr/" target="_blank" title="새창으로 열립니다">제주시장애인<span>통합돌봄지원센터</span></a>
+        </div>
+    </section>
+    <section class="main-contents">
+        <div class="container">
+
+
+<div class="notice">
+
+    <div id="tab01" class="tab-content active">
+        <a
+            href="/front/board/theme/list.wp?boardId=notice&menuId=MENU000000000000047"
+            class="tablink active"
+            data="tab01">공지사항
+        </a>
+        <ul class="list">
+            <wp:boardLatest
+                boardId="notice"
+                skinName="notice"
+                linkUrl="/front/board/theme/list.wp"
+                menuId="MENU000000000000047"
+                moreLink="/front/board/theme/view.wp"/>
+        </ul>
+        <a
+            href="/front/board/theme/list.wp?boardId=notice&menuId=MENU000000000000047"
+            class="more">
+            <i class="bx bx-plus"></i>
+        </a>
+    </div>
+    <div id="tab02" class="tab-content">
+        <a
+            href="/front/board/theme/list.wp?boardId=job&menuId=MENU000000000000074"
+            class="tablink"
+            data="tab02">채용정보
+        </a>
+        <ul class="list">
+            <wp:boardLatest
+                boardId="job"
+                skinName="notice"
+                linkUrl="/front/board/theme/list.wp"
+                menuId="MENU000000000000074"
+                listCount="5"
+                moreLink="/front/board/theme/view.wp"/>
+        </ul>
+        <a
+            href="/front/board/theme/list.wp?boardId=job&menuId=MENU000000000000074"
+            class="more">
+            <i class="bx bx-plus"></i>
+        </a>
+    </div>
+</div>
+
+
+
+
+<div class="notice press">
+
+    <div id="tab03" class="tab-content active">
+        <a
+            href="/front/board/theme/list.wp?boardId=media&menuId=MENU000000000000042"
+            class="tablink active"
+            data="tab03">언론보도
+        </a>
+        <ul class="list">
+
+            <wp:boardLatest boardId="media" skinName="notice" linkUrl="/front/board/theme/list.wp" menuId ="MENU000000000000042"  moreLink="/front/board/theme/view.wp"/>
+        </ul>
+        <a
+            href="/front/board/theme/list.wp?boardId=media&menuId=MENU000000000000042"
+            class="more">
+            <i class="bx bx-plus"></i>
+        </a>
+    </div>
+    <div id="tab04" class="tab-content">
+        <a
+            href="/front/board/theme/list.wp?boardId=letter&menuId=MENU000000000000050"
+            class="tablink"
+            data="tab04">소식지
+        </a>
+        <ul class="list">
+
+            <wp:boardLatest boardId="letter" skinName="notice" linkUrl="/front/board/theme/list.wp" menuId ="MENU000000000000050" listCount="5" moreLink="/front/board/theme/view.wp"/>
+        </ul>
+        <a
+            href="/front/board/theme/list.wp?boardId=letter&menuId=MENU000000000000050"
+            class="more">
+            <i class="bx bx-plus"></i>
+        </a>
+    </div>
+</div>
+
+
+
+        </div>
+    </section>
+
+
+
+    <section class="main-media">
+        <div class="container">
+            <div class="gallery">
+                <h2>Gallery</h2>
+
+                <div class="data">
+                    <div class="gall-slider">
+                        <wp:boardLatest boardId="gallery" skinName="gallery" listCount="2" linkUrl="/front/board/theme/list.wp" menuId ="MENU000000000000049"  moreLink="/front/board/theme/view.wp"/>
+                    </div>
+
+                    <button class="gall-prev" title="다음슬라이드"><i class='bx bx-chevron-left'></i>이전슬라이드</button>
+                    <button class="gall-next" title="이전슬라이드"><i class='bx bx-chevron-right'></i>다음슬라이드</button>
+
+
+                    <a href="/front/board/theme/list.wp?boardId=gallery&menuId=MENU000000000000049"><i class='bx bx-plus'></i>갤러리 게시판 바로가기</a>
+                </div>
+
+            </div>
+
+            <div class="facebook">
+                <h2>페이스북</h2>
+                <ul id="faceBookFeed">
+
+                </ul>
+                <a href="https://www.facebook.com/coophn/" target="_blank"><i class='bx bx-plus'></i>페이스북 페이지 바로가기</a>
+            </div>
+            <wp:boardLatest boardId="mov" skinName="mov" listCount="1" linkUrl="/front/board/theme/list.wp" menuId ="MENU000000000000049"  moreLink="/front/board/theme/view.wp"/>
+
+        </div>
+    </section>
+
+
+
+    <section class="main-product">
+        <div class="container">
+            <h2 class="sr-only">희망나래 상품목록</h2>
+
+            <dl class="printing">
+                <dt>
+                <h3>
+                    PRINTING
+                    <small>
+                        다양한 인쇄물의 디자인, 출력,
+                        <u>제본 등 인쇄물의 전반</u>
+                    </small>
+                </h3>
+                </dt>
+                <dd>
+
+
+
+
+                    <ul>
+
+                        <li>
+                            <a href="/front/board/theme/list.wp?boardId=printing&menuId=MENU000000000000043">
+                                <img src="/wp/assets/source/images/product01.jpg" alt="인쇄물 샘플 이미지">
+                            </a>
+                        </li>
+
+
+
+
+
+
+                        <%-- <wp:boardLatest boardId="printing" skinName="printing" listCount="1" linkUrl="/front/board/theme/list.wp" menuId ="MENU000000000000043"  moreLink="/front/board/theme/view.wp"/>--%>
+
+
+                    </ul>
+                    <a href="/front/board/theme/list.wp?boardId=printing&menuId=MENU000000000000043"><i class='bx bx-plus'></i>PRINTING 페이지 바로가기</a>
+
+
+
+
+                </dd>
+            </dl>
+
+            <dl class="gift">
+                <dt>
+                <h3>
+                    GIFT
+                    <small>
+                        판촉물, 기념품, 홍보용품
+                        <u>등을 제작 판매합니다</u>
+                    </small>
+                </h3>
+                </dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <a href="/front/menu/MENU000000000000044/">
+                                <img src="/wp/assets/source/images/product02.jpg" alt="GIFT 샘플 이미지">
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="/front/menu/MENU000000000000044/"><i class='bx bx-plus'></i>GIFT 페이지 바로가기</a>
+                </dd>
+            </dl>
+
+            <dl class="stationery">
+                <dt>
+                <h3>
+                    STATIONERY
+                    <small>
+                        문서화일 등을 포함한
+                        <u>문구류</u>
+                    </small>
+                </h3>
+                </dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <a href="/front/menu/MENU000000000000045/">
+                                <img src="/wp/assets/source/images/product03.jpg" alt="문구류 샘플 이미지">
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="/front/menu/MENU000000000000045/"><i class='bx bx-plus'></i>STATIONERY 페이지 바로가기</a>
+                </dd>
+            </dl>
+
+
+            <dl class="dm">
+                <dt>
+                <h3>
+                    나래 DM
+                    <small>
+                        마음을 전하는
+                        <u>DM발송</u>
+                    </small>
+                </h3>
+                </dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <a href="/front/menu/MENU000000000000072/">
+                                <img src="/wp/assets/source/images/product04.jpg" alt="DM 이미지">
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="/front/menu/MENU000000000000072/"><i class='bx bx-plus'></i>DM 페이지 바로가기</a>
+                </dd>
+            </dl>
+
+        </div>
+    </section>
+
+    <section class="site-links">
+        <div class="container">
+            <h2 class="sr-only">메인 이슈이미지 슬라이더</h2>
+
+
+            <div class="site-slider">
+                <info:banner group="main"/>
+
+            </div>
+
+            <button class="site-prev"><i class='bx bx-chevron-left'></i>이전슬라이드</button>
+            <button class="site-next"><i class='bx bx-chevron-right'></i>다음슬라이드</button>
+
+
+        </div>
+    </section>
+
+</div>
+<!-- E:mainContent -->
