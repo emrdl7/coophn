@@ -3958,7 +3958,7 @@ body div#content.sub section.sub-content.wcenter .container ul.tab li:nth-child(
   body div#content.sub section.sub-content.comm .container ul.tab li,
   body div#content.sub section.sub-content.work .container ul.tab li,
   body div#content.sub section.sub-content.wcenter .container ul.tab li {
-    width: 160px;
+    width: 148px;
   }
   body div#content.sub section.sub-content.dm .container ul.tab li:nth-child(odd),
   body div#content.sub section.sub-content.mediacafe .container ul.tab li:nth-child(odd),
@@ -4488,34 +4488,167 @@ body div#content.sub section.sub-content.work .container div.work-project p.text
 body div#content.sub section.sub-content.work .container div.work-project p.img {
   position: relative;
   font-size: 0;
-  padding-top: 142%;
+  padding-bottom: 142%;
   background: url("/wp/assets/source/images/img-project.png") no-repeat center / 100% auto;
 }
 body div#content.sub section.sub-content.work .container div.work-project p.img a {
   display: block;
   position: absolute;
+  top: 3.5%;
   left: 50%;
-  top: 2%;
-  width: 14%;
-  padding-top: 14%;
+  transform: translateX(-50%);
+  background: #ccc;
+  width: 10%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  font-size: 11px;
+}
+@media all and (min-width: 1200px) {
+  body div#content.sub section.sub-content.work .container div.work-project p.img a {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+body div#content.sub section.sub-content.work .container div.work-project p.img a span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  word-break: keep-all;
 }
 body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(1) {
-  margin-left: -43.3%;
+  margin-left: -43%;
+  background: #ffa3b8;
 }
 body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(2) {
-  margin-left: -28.2%;
+  margin-left: -31%;
+  background: #7fd5da;
 }
 body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(3) {
-  margin-left: -13.4%;
+  margin-left: -19%;
+  background: #b2a3f4;
 }
 body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(4) {
-  margin-left: 1.4%;
+  margin-left: -7%;
+  background: #fed09a;
 }
 body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(5) {
-  margin-left: 16.4%;
+  margin-left: 5%;
+  background: #cc9adc;
 }
 body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(6) {
-  margin-left: 31.6%;
+  margin-left: 17%;
+  background: #94c5ff;
+}
+body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(7) {
+  margin-left: 29%;
+  background: #7fd5da;
+}
+body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(8) {
+  margin-left: 42%;
+  background: #ffa3b8;
+}
+body div#content.sub section.sub-content.work .container div.dream-project h3 {
+  text-align: center;
+  font-size: 1.42857143rem;
+  position: relative;
+}
+@media all and (min-width: 1200px) {
+  body div#content.sub section.sub-content.work .container div.dream-project h3 {
+    text-align: left;
+  }
+}
+body div#content.sub section.sub-content.work .container div.dream-project h3::before {
+  content: "";
+  height: 0.21428571rem;
+  width: 1.28571429rem;
+  margin: 0.71428571rem auto;
+  display: block;
+  background: #64BFAA;
+}
+@media all and (min-width: 1200px) {
+  body div#content.sub section.sub-content.work .container div.dream-project h3::before {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 3px;
+    height: 16px;
+    margin: 0 10px 0 0;
+  }
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.text {
+  font-size: 14px;
+  padding: 0 0 0 14px;
+  margin: 0 0 30px;
+}
+@media all and (min-width: 1200px) {
+  body div#content.sub section.sub-content.work .container div.dream-project p.text {
+    font-size: 16px;
+  }
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img {
+  position: relative;
+  font-size: 0;
+  padding-bottom: 142%;
+  background: url("/wp/assets/source/images/img-project.png") no-repeat center / 100% auto;
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img {
+  position: relative;
+  font-size: 0;
+  padding-bottom: 25%;
+  background: url("/wp/assets/source/images/img-dream.png") no-repeat center / 100% auto;
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img a {
+  display: block;
+  position: absolute;
+  top: 3.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ccc;
+  width: 10%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  font-size: 11px;
+  text-align: center;
+}
+@media all and (min-width: 1200px) {
+  body div#content.sub section.sub-content.work .container div.dream-project p.img a {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img a span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  word-break: keep-all;
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img a span u {
+  text-decoration: none;
+  display: block;
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img a:nth-child(1) {
+  margin-left: -36%;
+  background: #ffa3b8;
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img a:nth-child(2) {
+  margin-left: -18%;
+  background: #7fd5da;
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img a:nth-child(3) {
+  margin-left: 0;
+  background: #b2a3f4;
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img a:nth-child(4) {
+  margin-left: 18%;
+  background: #fed09a;
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img a:nth-child(5) {
+  margin-left: 36%;
+  background: #cc9adc;
 }
 body div#content.sub section.sub-content.work .container div#tab01 h3 {
   font-size: 1.57142857rem;
@@ -4940,6 +5073,9 @@ body div#content.sub section.sub-content.work .container div#tab02 dl dd {
     margin-left: 0;
     width: calc(50% - 160px);
   }
+  body div#content.sub section.sub-content.work .container div#tab02 dl dd.full {
+    width: calc(100% - 160px);
+  }
 }
 body div#content.sub section.sub-content.work .container div#tab02 dl dd:before {
   content: "";
@@ -5025,20 +5161,15 @@ body div#content.sub section.sub-content.work .container div#tab02 ul.photo li h
   display: inline-block;
   font-size: 1.14285714rem;
 }
-body div#content.sub section.sub-content.work .container div#tab03 {
+section.sub-content.work .container div#tab03 {
   position: relative;
 }
-body div#content.sub section.sub-content.work .container div#tab03 h3 {
+section.sub-content.work .container div#tab03 h3 {
   text-align: center;
   font-size: 1.42857143rem;
   position: relative;
 }
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.work .container div#tab03 h3 {
-    text-align: left;
-  }
-}
-body div#content.sub section.sub-content.work .container div#tab03 h3::before {
+section.sub-content.work .container div#tab03 h3::before {
   content: "";
   height: 0.21428571rem;
   width: 1.28571429rem;
@@ -5047,7 +5178,10 @@ body div#content.sub section.sub-content.work .container div#tab03 h3::before {
   background: #64BFAA;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.work .container div#tab03 h3::before {
+  section.sub-content.work .container div#tab03 h3 {
+    text-align: left;
+  }
+  section.sub-content.work .container div#tab03 h3::before {
     display: inline-block;
     position: relative;
     top: 2px;
@@ -5056,7 +5190,7 @@ body div#content.sub section.sub-content.work .container div#tab03 h3::before {
     margin: 0 10px 0 0;
   }
 }
-body div#content.sub section.sub-content.work .container div#tab03::after {
+section.sub-content.work .container div#tab03::after {
   content: "";
   display: block;
   width: 15.48928571rem;
@@ -5065,7 +5199,7 @@ body div#content.sub section.sub-content.work .container div#tab03::after {
   background: url("../images/narae.svg") no-repeat center / 100% 100%;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.work .container div#tab03::after {
+  section.sub-content.work .container div#tab03::after {
     width: 376.2px;
     height: 259.78px;
     position: absolute;
@@ -5073,57 +5207,57 @@ body div#content.sub section.sub-content.work .container div#tab03::after {
     bottom: 0;
   }
 }
-body div#content.sub section.sub-content.work .container div#tab03 dl {
+section.sub-content.work .container div#tab03 dl {
   margin: 1.42857143rem 0;
   padding: 1.42857143rem 0;
 }
-body div#content.sub section.sub-content.work .container div#tab03 dl:first-of-type {
+section.sub-content.work .container div#tab03 dl:first-of-type {
   border-bottom: 1px dotted #999;
 }
-body div#content.sub section.sub-content.work .container div#tab03 dl dt {
+section.sub-content.work .container div#tab03 dl dt {
   float: left;
 }
-body div#content.sub section.sub-content.work .container div#tab03 dl dt h4 {
+section.sub-content.work .container div#tab03 dl dt h4 {
   position: relative;
   margin: 0;
   padding: 0;
   font-size: 1.57142857rem;
   color: #30A087;
 }
-body div#content.sub section.sub-content.work .container div#tab03 dl dd {
+section.sub-content.work .container div#tab03 dl dd {
   font-size: 1.42857143rem;
   margin: 0 0 0 5.71428571rem;
   z-index: 100;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.work .container div#tab03 dl dd {
+  section.sub-content.work .container div#tab03 dl dd {
     margin: 0 0 0 130px;
   }
 }
-body div#content.sub section.sub-content.work .container div#tab03 dl dd h5 {
+section.sub-content.work .container div#tab03 dl dd h5 {
   margin: 0;
   padding: 0;
   font-size: 1.42857143rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.work .container div#tab03 dl dd h5 {
+  section.sub-content.work .container div#tab03 dl dd h5 {
     display: inline-block;
     vertical-align: top;
     margin-right: 50px;
     min-width: 60px;
   }
 }
-body div#content.sub section.sub-content.work .container div#tab03 dl dd p {
+section.sub-content.work .container div#tab03 dl dd p {
   margin: 0 0 0.71428571rem;
   word-break: keep-all;
   font-size: 1.14285714rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.work .container div#tab03 dl dd p {
+  section.sub-content.work .container div#tab03 dl dd p {
     display: inline-block;
   }
 }
-body div#content.sub section.sub-content.work .container div#tab03 dl dd p i {
+section.sub-content.work .container div#tab03 dl dd p i {
   display: block;
   font-style: normal;
 }
@@ -5349,6 +5483,15 @@ body div#content.sub section.sub-content.wcenter .container div.project p.img.im
 body div#content.sub section.sub-content.wcenter .container div.project p.img.img18 {
   background: url("/wp/assets/source/images/img-wcenter18.jpg") no-repeat center / cover;
 }
+body div#content.sub section.sub-content.wcenter .container div.project p.img.img19 {
+  background: url("/wp/assets/source/images/img-wcenter19.jpg") no-repeat center / cover;
+}
+body div#content.sub section.sub-content.wcenter .container div.project p.img.img20 {
+  background: url("/wp/assets/source/images/img-wcenter20.jpg") no-repeat center / cover;
+}
+body div#content.sub section.sub-content.wcenter .container div.project p.img.img21 {
+  background: url("/wp/assets/source/images/img-wcenter21.jpg") no-repeat center / cover;
+}
 body div#content.sub section.sub-content.wcenter .container div.project > ul {
   list-style: none;
   padding: 0;
@@ -5432,16 +5575,16 @@ body div#content.sub section.sub-content.wcenter .container div.project > ul li 
     font-size: 16px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule {
+section.sub-content.wcenter .container div.project div.schedule {
   position: relative;
   margin: 0 0 2.85714286rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule {
+  section.sub-content.wcenter .container div.project div.schedule {
     margin: 0 0 60px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule p.title i {
+section.sub-content.wcenter .container div.project div.schedule p.title i {
   display: block;
   position: absolute;
   left: 0;
@@ -5456,13 +5599,13 @@ body div#content.sub section.sub-content.wcenter .container div.project div.sche
   font-weight: 600;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule p.title i {
+  section.sub-content.wcenter .container div.project div.schedule p.title i {
     font-size: 26px;
     width: 56px;
     line-height: 56px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule p.title strong {
+section.sub-content.wcenter .container div.project div.schedule p.title strong {
   display: block;
   font-weight: 600;
   font-size: 1.28571429rem;
@@ -5470,23 +5613,23 @@ body div#content.sub section.sub-content.wcenter .container div.project div.sche
   margin: 0 0 0.71428571rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule p.title strong {
+  section.sub-content.wcenter .container div.project div.schedule p.title strong {
     font-size: 26px;
     padding: 0 0 0 70px;
     margin: 0 0 20px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule p.title strong small {
+section.sub-content.wcenter .container div.project div.schedule p.title strong small {
   display: block;
   font-weight: 400;
   font-size: 1rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule p.title strong small {
+  section.sub-content.wcenter .container div.project div.schedule p.title strong small {
     font-size: 16px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul {
+section.sub-content.wcenter .container div.project div.schedule ul {
   border-radius: 0.71428571rem;
   list-style: none;
   margin: 0;
@@ -5495,46 +5638,51 @@ body div#content.sub section.sub-content.wcenter .container div.project div.sche
   font-size: 0;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul {
+  section.sub-content.wcenter .container div.project div.schedule ul {
     background: #F4F4F4;
     padding: 40px 40px 10px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul li {
+section.sub-content.wcenter .container div.project div.schedule ul li {
   text-align: left;
   margin: 0 0 1.42857143rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul li {
+  section.sub-content.wcenter .container div.project div.schedule ul li {
     display: inline-block;
     vertical-align: top;
     margin: 0 0 30px;
     width: calc((100% - 68px) / 3);
     margin-right: 34px;
   }
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul li:nth-child(3n),
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul li:last-child {
+}
+@media all and (min-width: 1200px) {
+  section.sub-content.wcenter .container div.project div.schedule ul li:nth-child(3n),
+  section.sub-content.wcenter .container div.project div.schedule ul li:last-child {
     margin-right: 0;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul li strong {
+section.sub-content.wcenter .container div.project div.schedule ul li strong {
   display: block;
   font-size: 1.14285714rem;
   font-weight: 600;
   margin: 0.71428571rem 0 0;
 }
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul li p.text {
+section.sub-content.wcenter .container div.project div.schedule ul li p.text {
   font-size: 1rem;
   margin: 0;
   word-break: keep-all;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl {
+section.sub-content.wcenter .container div.project div.schedule.etc p.title i {
+  background: #d8c2eb;
+}
+section.sub-content.wcenter .container div#tab06 dl {
   margin: 0;
   padding: 0;
   display: inline-block;
   width: 100%;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dt {
+section.sub-content.wcenter .container div#tab06 dl dt {
   display: block;
   position: relative;
   text-align: center;
@@ -5547,7 +5695,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab06 dl dt {
   background: #E67F11;
   color: #fff;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dt::before {
+section.sub-content.wcenter .container div#tab06 dl dt::before {
   content: "";
   display: block;
   width: 1px;
@@ -5558,11 +5706,11 @@ body div#content.sub section.sub-content.wcenter .container div#tab06 dl dt::bef
   background-color: #E67F11;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab06 dl dt {
+  section.sub-content.wcenter .container div#tab06 dl dt {
     float: left;
     margin: 0;
   }
-  body div#content.sub section.sub-content.wcenter .container div#tab06 dl dt::before {
+  section.sub-content.wcenter .container div#tab06 dl dt::before {
     width: 10.71428571rem;
     height: 1px;
     left: auto;
@@ -5570,7 +5718,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab06 dl dt::bef
     top: 50%;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dt::after {
+section.sub-content.wcenter .container div#tab06 dl dt::after {
   content: "";
   display: block;
   width: 0.85714286rem;
@@ -5583,30 +5731,30 @@ body div#content.sub section.sub-content.wcenter .container div#tab06 dl dt::aft
   background-color: #E67F11;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab06 dl dt::after {
+  section.sub-content.wcenter .container div#tab06 dl dt::after {
     left: auto;
     right: -162px;
     top: 50%;
     margin: -6px 0 0;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dt h4 {
+section.sub-content.wcenter .container div#tab06 dl dt h4 {
   margin: 0;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd {
+section.sub-content.wcenter .container div#tab06 dl dd {
   padding: 0;
   margin: 1rem 0 2.14285714rem;
   font-size: 1.42857143rem;
   text-align: center;
 }
 @media all and (max-width: 1199px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd {
+  section.sub-content.wcenter .container div#tab06 dl dd {
     display: inline-block;
     width: 100%;
   }
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd {
+  section.sub-content.wcenter .container div#tab06 dl dd {
     text-align: left;
     min-height: 100px;
     width: auto;
@@ -5614,19 +5762,19 @@ body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd {
     margin: 0 0 40px 320px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd p {
+section.sub-content.wcenter .container div#tab06 dl dd p {
   margin: 0;
   padding: 0;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd p {
+  section.sub-content.wcenter .container div#tab06 dl dd p {
     display: inline-block;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.value {
+section.sub-content.wcenter .container div#tab06 dl dd.value {
   font-size: 0;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.value div {
+section.sub-content.wcenter .container div#tab06 dl dd.value div {
   margin: 0 0 1.42857143rem;
   font-size: 1.42857143rem;
   vertical-align: top;
@@ -5634,7 +5782,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.valu
   color: #fff;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.value div {
+  section.sub-content.wcenter .container div#tab06 dl dd.value div {
     display: inline-block;
     text-align: center;
     width: calc(100% / 3);
@@ -5645,33 +5793,33 @@ body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.valu
     min-height: 228px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.value div.v01 {
+section.sub-content.wcenter .container div#tab06 dl dd.value div.v01 {
   background: #89C7BB;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.value div.v02 {
+section.sub-content.wcenter .container div#tab06 dl dd.value div.v02 {
   background: #8A88B5;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.value div.v03 {
+section.sub-content.wcenter .container div#tab06 dl dd.value div.v03 {
   background: #776763;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.value div h5 {
+section.sub-content.wcenter .container div#tab06 dl dd.value div h5 {
   font-size: 1.85714286rem;
   border-bottom: 1px solid #fff;
   padding: 0 0 1.42857143rem;
   margin: 0 0 1.42857143rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.value div h5 p {
+  section.sub-content.wcenter .container div#tab06 dl dd.value div h5 p {
     display: block;
     text-align: center;
   }
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.goal {
+  section.sub-content.wcenter .container div#tab06 dl dd.goal {
     display: flex;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.goal h5 {
+section.sub-content.wcenter .container div#tab06 dl dd.goal h5 {
   vertical-align: top;
   margin: 0 auto 1.42857143rem;
   width: 15.42857143rem;
@@ -5680,28 +5828,28 @@ body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.goal
   font-weight: 400;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.goal h5 {
+  section.sub-content.wcenter .container div#tab06 dl dd.goal h5 {
     text-align: center;
     position: relative;
     top: -90px;
     margin: 0 auto -40px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.goal h5:nth-of-type(1) {
+section.sub-content.wcenter .container div#tab06 dl dd.goal h5:nth-of-type(1) {
   background: url("/wp/assets/source/images/main-links08.svg") no-repeat center top / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.goal h5:nth-of-type(2) {
+section.sub-content.wcenter .container div#tab06 dl dd.goal h5:nth-of-type(2) {
   background: url("/wp/assets/source/images/main-links09.svg") no-repeat center top / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.goal h5:nth-of-type(3) {
+section.sub-content.wcenter .container div#tab06 dl dd.goal h5:nth-of-type(3) {
   background: url("/wp/assets/source/images/main-links10.svg") no-repeat center top / 100% auto;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.rule {
+  section.sub-content.wcenter .container div#tab06 dl dd.rule {
     display: static;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.rule div {
+section.sub-content.wcenter .container div#tab06 dl dd.rule div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5716,7 +5864,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.rule
   border: 5px solid #E67F11;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.rule div {
+  section.sub-content.wcenter .container div#tab06 dl dd.rule div {
     display: inline-block;
     float: left;
     text-align: center;
@@ -5727,20 +5875,20 @@ body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.rule
     top: -40px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.rule div:last-of-type {
+section.sub-content.wcenter .container div#tab06 dl dd.rule div:last-of-type {
   margin-right: 0;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.rule div:nth-of-type(2) {
+section.sub-content.wcenter .container div#tab06 dl dd.rule div:nth-of-type(2) {
   border-color: #EFB818;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.rule div:nth-of-type(3) {
+section.sub-content.wcenter .container div#tab06 dl dd.rule div:nth-of-type(3) {
   border-color: #EFB474;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 dl dd.rule div p {
+section.sub-content.wcenter .container div#tab06 dl dd.rule div p {
   margin: 0;
   display: block;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 div.slogan {
+section.sub-content.wcenter .container div#tab06 div.slogan {
   position: relative;
   background: #f4f4f4;
   text-align: center;
@@ -5750,18 +5898,18 @@ body div#content.sub section.sub-content.wcenter .container div#tab06 div.slogan
   margin: 5rem 0 5.71428571rem;
   border: 4px solid #8BBA28;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 div.slogan span {
+section.sub-content.wcenter .container div#tab06 div.slogan span {
   display: block;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab06 div.slogan span {
+  section.sub-content.wcenter .container div#tab06 div.slogan span {
     display: inline-block;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 div.slogan strong {
+section.sub-content.wcenter .container div#tab06 div.slogan strong {
   font-size: 2.14285714rem;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab06 div.slogan h3 {
+section.sub-content.wcenter .container div#tab06 div.slogan h3 {
   position: absolute;
   font-size: 1.71428571rem;
   width: 12.42857143rem;
@@ -5773,33 +5921,33 @@ body div#content.sub section.sub-content.wcenter .container div#tab06 div.slogan
   border-radius: 0.85714286rem;
   color: #fff;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 h3 {
+div#content.sub section.sub-content.wcenter .container div#tab01 h3 {
   font-size: 1.57142857rem;
   text-align: center;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 h3 {
+  div#content.sub section.sub-content.wcenter .container div#tab01 h3 {
     border-bottom: 1px solid #eee;
     padding: 0 0 2.14285714rem;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 h3 small {
+div#content.sub section.sub-content.wcenter .container div#tab01 h3 small {
   display: block;
   margin: 0 auto;
   font-size: inherit;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 h3 small {
+  div#content.sub section.sub-content.wcenter .container div#tab01 h3 small {
     display: inline-block;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl {
   margin: 0;
   padding: 0;
   display: inline-block;
   width: 100%;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt {
   display: block;
   position: relative;
   text-align: center;
@@ -5813,12 +5961,12 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt {
   border-style: solid;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dt {
     float: left;
     margin: 0;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt::before {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt::before {
   content: "";
   display: block;
   width: 1px;
@@ -5828,7 +5976,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt::bef
   bottom: -3.57142857rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt::before {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dt::before {
     width: 10.71428571rem;
     height: 1px;
     left: auto;
@@ -5836,7 +5984,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt::bef
     top: 50%;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt::after {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt::after {
   content: "";
   display: block;
   width: 0.85714286rem;
@@ -5848,79 +5996,79 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt::aft
   border-radius: 50%;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt::after {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dt::after {
     left: auto;
     right: -162px;
     top: 50%;
     margin: -6px 0 0;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.mission {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.mission {
   border-color: #FFD981;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.mission::before,
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.mission::after {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.mission::before,
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.mission::after {
   background-color: #FFD981;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.vision {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.vision {
   border-color: #BCE2E3;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.vision::before,
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.vision::after {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.vision::before,
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.vision::after {
   background-color: #BCE2E3;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.value {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.value {
   border-color: #BCDCBC;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.value::before,
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.value::after {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.value::before,
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.value::after {
   background-color: #BCDCBC;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.goal {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.goal {
   border-color: #ACC6D2;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.goal::before,
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.goal::after {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.goal::before,
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.goal::after {
   background-color: #ACC6D2;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.rule {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.rule {
   border-color: #F2BE8C;
   margin-bottom: 5rem;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.rule::before,
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.rule::after {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.rule::before,
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.rule::after {
   background-color: #F2BE8C;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.year5 {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.year5 {
   border-color: #f28cca;
   padding-top: 1.42857143rem;
   line-height: 1.4;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.year5::before,
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.year5::after {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.year5::before,
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.year5::after {
   background-color: #f28cca;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.year5 u {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt.year5 u {
   display: block;
   text-decoration: none;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dt h4 {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dt h4 {
   margin: 0;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd {
   padding: 0;
   margin: 1rem 0 2.14285714rem;
   font-size: 1.42857143rem;
   text-align: center;
 }
 @media all and (max-width: 1199px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dd {
     display: inline-block;
     width: 100%;
   }
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dd {
     text-align: left;
     min-height: 100px;
     width: auto;
@@ -5928,25 +6076,25 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd {
     margin: 0 0 40px 320px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd p {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd p {
   margin: 0;
   padding: 0;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd p {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dd p {
     display: inline-block;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value {
   font-size: 0;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div {
   margin: 0 0 1.42857143rem;
   font-size: 1.42857143rem;
   vertical-align: top;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div {
     display: inline-block;
     text-align: center;
     width: calc(100% / 3);
@@ -5955,7 +6103,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.valu
     margin: 0 0 -40px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div h5 {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div h5 {
   display: inline-block;
   margin: 0 auto 0.71428571rem;
   width: 12.35714286rem;
@@ -5967,24 +6115,24 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.valu
   font-size: 1.71428571rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div p {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div p {
     display: block;
     text-align: center;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div.v01 h5 {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div.v01 h5 {
   border-color: rgba(183, 220, 118, 0.5);
   background: url("../images/value-v01.svg") no-repeat center / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div.v02 h5 {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div.v02 h5 {
   border-color: rgba(123, 190, 216, 0.5);
   background: url("../images/value-v02.svg") no-repeat center / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div.v03 h5 {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.value div.v03 h5 {
   border-color: rgba(216, 219, 140, 0.5);
   background: url("../images/value-v03.svg") no-repeat center / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal h5 {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal h5 {
   vertical-align: top;
   margin: 0 auto 1.42857143rem;
   width: 15.42857143rem;
@@ -5993,7 +6141,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal
   font-weight: 400;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal h5 {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal h5 {
     display: inline-block;
     text-align: center;
     position: relative;
@@ -6001,24 +6149,24 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal
     margin: 0 auto -40px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal h5:nth-of-type(1) {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal h5:nth-of-type(1) {
   background: url("../images/main-links03.svg") no-repeat center top / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal h5:nth-of-type(2) {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal h5:nth-of-type(2) {
   background: url("../images/main-links04.svg") no-repeat center top / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal h5:nth-of-type(3) {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal h5:nth-of-type(3) {
   background: url("../images/main-links02.svg") no-repeat center top / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal h5:nth-of-type(4) {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.goal h5:nth-of-type(4) {
   background: url("../images/main-links01.svg") no-repeat center top / 100% auto;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule {
     display: static;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6032,7 +6180,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule
   font-size: 1.14285714rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div {
     display: inline-block;
     float: left;
     text-align: center;
@@ -6042,24 +6190,24 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule
     position: relative;
     top: -40px;
   }
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div:last-of-type {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div:last-of-type {
     margin-right: 0;
   }
-  body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div:first-of-type {
+  div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div:first-of-type {
     padding-top: 30px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div:nth-of-type(odd) {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div:nth-of-type(odd) {
   background: rgba(246, 215, 159, 0.5);
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div:nth-of-type(even) {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div:nth-of-type(even) {
   background: rgba(247, 182, 171, 0.5);
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div p {
+div#content.sub section.sub-content.wcenter .container div#tab01 dl dd.rule div p {
   margin: 0;
   display: block;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan {
+div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan {
   position: relative;
   background: #f4f4f4;
   text-align: center;
@@ -6068,7 +6216,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan
   font-size: 1.85714286rem;
   margin: 5rem 0 5.71428571rem;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan::before {
+div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan::before {
   content: "";
   display: block;
   top: 3.57142857rem;
@@ -6079,11 +6227,11 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan
   background: url("../images/slogan01.svg") no-repeat center / 100% 100%;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan::before {
+  div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan::before {
     left: 260px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan::after {
+div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan::after {
   content: "";
   display: block;
   top: 3.57142857rem;
@@ -6094,22 +6242,22 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan
   background: url("../images/slogan02.svg") no-repeat center / 100% 100%;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan::after {
+  div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan::after {
     right: 260px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan span {
+div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan span {
   display: block;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan span {
+  div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan span {
     display: inline-block;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan strong {
+div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan strong {
   font-size: 2.14285714rem;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan h3 {
+div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan h3 {
   position: absolute;
   font-size: 1.71428571rem;
   width: 12.42857143rem;
@@ -6121,17 +6269,17 @@ body div#content.sub section.sub-content.wcenter .container div#tab01 div.slogan
   border-radius: 0.85714286rem;
   padding: 0 0 0 2.85714286rem;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab05 h3 {
+div#content.sub section.sub-content.wcenter .container div#tab05 h3 {
   text-align: center;
   font-size: 1.42857143rem;
   position: relative;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab05 h3 {
+  div#content.sub section.sub-content.wcenter .container div#tab05 h3 {
     text-align: left;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab05 h3::before {
+div#content.sub section.sub-content.wcenter .container div#tab05 h3::before {
   content: "";
   height: 0.21428571rem;
   width: 1.28571429rem;
@@ -6140,7 +6288,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab05 h3::before
   background: #64BFAA;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab05 h3::before {
+  div#content.sub section.sub-content.wcenter .container div#tab05 h3::before {
     display: inline-block;
     position: relative;
     top: 2px;
@@ -6149,40 +6297,40 @@ body div#content.sub section.sub-content.wcenter .container div#tab05 h3::before
     margin: 0 10px 0 0;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab05 ul.data {
+div#content.sub section.sub-content.wcenter .container div#tab05 ul.data {
   list-style: none;
   margin: 1.42857143rem 0 2.14285714rem;
   padding: 0;
   font-size: 0;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li {
+div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li {
   font-size: 1.14285714rem;
   padding: 0 0 0.71428571rem 0.71428571rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li {
+  div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li {
     padding: 0;
     display: inline-block;
     margin-right: 30px;
     min-width: 36%;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li strong {
+div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li strong {
   display: block;
   position: relative;
   left: -0.71428571rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li strong {
+  div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li strong {
     left: 0;
     display: inline-block;
     margin-right: 6px;
   }
-  body div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li strong::after {
+  div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li strong::after {
     content: ":";
     padding-left: 6px;
   }
-  body div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li strong::before {
+  div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li strong::before {
     content: "";
     display: inline-block;
     vertical-align: top;
@@ -6193,11 +6341,11 @@ body div#content.sub section.sub-content.wcenter .container div#tab05 ul.data li
     background: #64BFAA;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab05 dl {
+div#content.sub section.sub-content.wcenter .container div#tab05 dl {
   margin: 1.42857143rem 0;
   text-align: center;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab05 dl dt {
+div#content.sub section.sub-content.wcenter .container div#tab05 dl dt {
   text-align: center;
   width: 14.28571429rem;
   line-height: 3.85714286rem;
@@ -6208,19 +6356,19 @@ body div#content.sub section.sub-content.wcenter .container div#tab05 dl dt {
   font-size: 1.57142857rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab05 dl dt {
+  div#content.sub section.sub-content.wcenter .container div#tab05 dl dt {
     float: left;
     font-size: 18px;
     z-index: -1;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab05 dl dt:nth-of-type(odd) {
+div#content.sub section.sub-content.wcenter .container div#tab05 dl dt:nth-of-type(odd) {
   background: #BCE2E3;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab05 dl dt:nth-of-type(even) {
+div#content.sub section.sub-content.wcenter .container div#tab05 dl dt:nth-of-type(even) {
   background: #FFD981;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab05 dl dd {
+div#content.sub section.sub-content.wcenter .container div#tab05 dl dd {
   background: rgba(0, 0, 0, 0.05);
   margin: -2.14285714rem 0 2.14285714rem;
   padding: 3.57142857rem 1.42857143rem 1.42857143rem;
@@ -6228,7 +6376,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab05 dl dd {
   font-size: 1.14285714rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab05 dl dd {
+  div#content.sub section.sub-content.wcenter .container div#tab05 dl dd {
     text-align: left;
     margin: 0 0 20px 204px;
     border-radius: 27px;
@@ -6236,41 +6384,41 @@ body div#content.sub section.sub-content.wcenter .container div#tab05 dl dd {
     padding: 0 30px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab05 dl dd span {
+div#content.sub section.sub-content.wcenter .container div#tab05 dl dd span {
   display: block;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab05 dl dd span {
+  div#content.sub section.sub-content.wcenter .container div#tab05 dl dd span {
     display: inline-block;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 h3 {
+div#content.sub section.sub-content.wcenter .container div#tab07 h3 {
   font-size: 1.57142857rem;
   text-align: center;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 h3 {
+  div#content.sub section.sub-content.wcenter .container div#tab07 h3 {
     border-bottom: 1px solid #eee;
     padding: 0 0 2.14285714rem;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 h3 small {
+div#content.sub section.sub-content.wcenter .container div#tab07 h3 small {
   display: block;
   margin: 0 auto;
   font-size: inherit;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 h3 small {
+  div#content.sub section.sub-content.wcenter .container div#tab07 h3 small {
     display: inline-block;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl {
   margin: 0;
   padding: 0;
   display: inline-block;
   width: 100%;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt {
   display: block;
   position: relative;
   text-align: center;
@@ -6284,12 +6432,12 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt {
   border-style: solid;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dt {
     float: left;
     margin: 0;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt::before {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt::before {
   content: "";
   display: block;
   width: 1px;
@@ -6299,7 +6447,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt::bef
   bottom: -3.57142857rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt::before {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dt::before {
     width: 10.71428571rem;
     height: 1px;
     left: auto;
@@ -6307,7 +6455,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt::bef
     top: 50%;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt::after {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt::after {
   content: "";
   display: block;
   width: 0.85714286rem;
@@ -6319,73 +6467,73 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt::aft
   border-radius: 50%;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt::after {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dt::after {
     left: auto;
     right: -162px;
     top: 50%;
     margin: -6px 0 0;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.mission {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.mission {
   border-color: #FFD981;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.mission::before,
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.mission::after {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.mission::before,
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.mission::after {
   background-color: #FFD981;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.vision {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.vision {
   border-color: #BCE2E3;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.vision::before,
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.vision::after {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.vision::before,
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.vision::after {
   background-color: #BCE2E3;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.value {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.value {
   border-color: #BCDCBC;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.value::before,
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.value::after {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.value::before,
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.value::after {
   background-color: #BCDCBC;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.goal {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.goal {
   border-color: #ACC6D2;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.goal::before,
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.goal::after {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.goal::before,
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.goal::after {
   background-color: #ACC6D2;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.rule {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.rule {
   border-color: #F2BE8C;
   margin-bottom: 5rem;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.rule::before,
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.rule::after {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.rule::before,
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.rule::after {
   background-color: #F2BE8C;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.year5 {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.year5 {
   border-color: #f28cca;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.year5::before,
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.year5::after {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.year5::before,
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt.year5::after {
   background-color: #f28cca;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dt h4 {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dt h4 {
   margin: 0;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd {
   padding: 0;
   margin: 1rem 0 2.14285714rem;
   font-size: 1.42857143rem;
   text-align: center;
 }
 @media all and (max-width: 1199px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dd {
     display: inline-block;
     width: 100%;
   }
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dd {
     text-align: left;
     min-height: 100px;
     width: auto;
@@ -6393,25 +6541,25 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd {
     margin: 0 0 40px 320px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd p {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd p {
   margin: 0;
   padding: 0;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd p {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dd p {
     display: inline-block;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value {
   font-size: 0;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div {
   margin: 0 0 1.42857143rem;
   font-size: 1.42857143rem;
   vertical-align: top;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div {
     display: inline-block;
     text-align: center;
     width: calc(100% / 3);
@@ -6420,7 +6568,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.valu
     margin: 0 0 -40px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div h5 {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div h5 {
   display: inline-block;
   margin: 0 auto 0.71428571rem;
   width: 12.35714286rem;
@@ -6432,24 +6580,24 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.valu
   font-size: 1.71428571rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div p {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div p {
     display: block;
     text-align: center;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div.v01 h5 {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div.v01 h5 {
   border-color: rgba(183, 220, 118, 0.5);
   background: url("../images/value-v01.svg") no-repeat center / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div.v02 h5 {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div.v02 h5 {
   border-color: rgba(123, 190, 216, 0.5);
   background: url("../images/value-v02.svg") no-repeat center / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div.v03 h5 {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.value div.v03 h5 {
   border-color: rgba(216, 219, 140, 0.5);
   background: url("../images/value-v03.svg") no-repeat center / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal h5 {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal h5 {
   vertical-align: top;
   margin: 0 auto 1.42857143rem;
   width: 15.42857143rem;
@@ -6458,7 +6606,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal
   font-weight: 400;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal h5 {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal h5 {
     display: inline-block;
     text-align: center;
     position: relative;
@@ -6466,24 +6614,24 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal
     margin: 0 auto -40px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal h5:nth-of-type(1) {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal h5:nth-of-type(1) {
   background: url("../images/main-links03.svg") no-repeat center top / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal h5:nth-of-type(2) {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal h5:nth-of-type(2) {
   background: url("../images/main-links04.svg") no-repeat center top / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal h5:nth-of-type(3) {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal h5:nth-of-type(3) {
   background: url("../images/main-links02.svg") no-repeat center top / 100% auto;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal h5:nth-of-type(4) {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.goal h5:nth-of-type(4) {
   background: url("../images/main-links01.svg") no-repeat center top / 100% auto;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule {
     display: static;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6497,7 +6645,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule
   font-size: 1.14285714rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div {
     display: inline-block;
     float: left;
     text-align: center;
@@ -6507,24 +6655,24 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule
     position: relative;
     top: -40px;
   }
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div:last-of-type {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div:last-of-type {
     margin-right: 0;
   }
-  body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div:nth-of-type(2) {
+  div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div:nth-of-type(2) {
     padding-top: 30px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div:nth-of-type(odd) {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div:nth-of-type(odd) {
   background: rgba(246, 215, 159, 0.5);
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div:nth-of-type(even) {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div:nth-of-type(even) {
   background: rgba(247, 182, 171, 0.5);
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div p {
+div#content.sub section.sub-content.wcenter .container div#tab07 dl dd.rule div p {
   margin: 0;
   display: block;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan {
+div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan {
   position: relative;
   background: #f4f4f4;
   text-align: center;
@@ -6533,7 +6681,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan
   font-size: 1.85714286rem;
   margin: 5rem 0 5.71428571rem;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan::before {
+div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan::before {
   content: "";
   display: block;
   top: 3.57142857rem;
@@ -6544,11 +6692,11 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan
   background: url("../images/slogan01.svg") no-repeat center / 100% 100%;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan::before {
+  div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan::before {
     left: 260px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan::after {
+div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan::after {
   content: "";
   display: block;
   top: 3.57142857rem;
@@ -6559,22 +6707,22 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan
   background: url("../images/slogan02.svg") no-repeat center / 100% 100%;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan::after {
+  div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan::after {
     right: 260px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan span {
+div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan span {
   display: block;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan span {
+  div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan span {
     display: inline-block;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan strong {
+div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan strong {
   font-size: 2.14285714rem;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan h3 {
+div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan h3 {
   position: absolute;
   font-size: 1.71428571rem;
   width: 12.42857143rem;
@@ -6586,20 +6734,20 @@ body div#content.sub section.sub-content.wcenter .container div#tab07 div.slogan
   border-radius: 0.85714286rem;
   padding: 0 0 0 2.85714286rem;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 {
+div#content.sub section.sub-content.wcenter .container div#tab08 {
   font-size: 0;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 h3 {
+div#content.sub section.sub-content.wcenter .container div#tab08 h3 {
   text-align: center;
   font-size: 1.42857143rem;
   position: relative;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab08 h3 {
+  div#content.sub section.sub-content.wcenter .container div#tab08 h3 {
     text-align: left;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 h3::before {
+div#content.sub section.sub-content.wcenter .container div#tab08 h3::before {
   content: "";
   height: 0.21428571rem;
   width: 1.28571429rem;
@@ -6608,7 +6756,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab08 h3::before
   background: #64BFAA;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab08 h3::before {
+  div#content.sub section.sub-content.wcenter .container div#tab08 h3::before {
     display: inline-block;
     position: relative;
     top: 2px;
@@ -6617,7 +6765,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab08 h3::before
     margin: 0 10px 0 0;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 h4 {
+div#content.sub section.sub-content.wcenter .container div#tab08 h4 {
   margin: 0;
   text-align: center;
   font-size: 1.28571429rem;
@@ -6625,45 +6773,45 @@ body div#content.sub section.sub-content.wcenter .container div#tab08 h4 {
   color: #30A087;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab08 h4 {
+  div#content.sub section.sub-content.wcenter .container div#tab08 h4 {
     text-align: left;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 div + h3,
-body div#content.sub section.sub-content.wcenter .container div#tab08 div + h4 {
+div#content.sub section.sub-content.wcenter .container div#tab08 div + h3,
+div#content.sub section.sub-content.wcenter .container div#tab08 div + h4 {
   margin-top: 50px;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 ul.data {
+div#content.sub section.sub-content.wcenter .container div#tab08 ul.data {
   list-style: none;
   margin: 1.42857143rem 0 2.14285714rem;
   padding: 0;
   font-size: 0;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li {
+div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li {
   font-size: 1.14285714rem;
   padding: 0 0 0.71428571rem 0.71428571rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li {
+  div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li {
     padding: 0;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li strong {
+div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li strong {
   display: block;
   position: relative;
   left: -0.71428571rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li strong {
+  div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li strong {
     left: 0;
     display: inline-block;
     margin-right: 6px;
   }
-  body div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li strong::after {
+  div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li strong::after {
     content: ":";
     padding-left: 6px;
   }
-  body div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li strong::before {
+  div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li strong::before {
     content: "";
     display: inline-block;
     vertical-align: top;
@@ -6674,7 +6822,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab08 ul.data li
     background: #64BFAA;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 div {
+div#content.sub section.sub-content.wcenter .container div#tab08 div {
   position: relative;
   background: #EEEEEE;
   padding: 0.71428571rem;
@@ -6682,7 +6830,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab08 div {
   text-align: center;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab08 div {
+  div#content.sub section.sub-content.wcenter .container div#tab08 div {
     display: inline-block;
     vertical-align: top;
     width: calc(50% - 15px);
@@ -6691,16 +6839,16 @@ body div#content.sub section.sub-content.wcenter .container div#tab08 div {
     padding: 30px;
     margin: 0 0 30px;
   }
-  body div#content.sub section.sub-content.wcenter .container div#tab08 div.mr {
+  div#content.sub section.sub-content.wcenter .container div#tab08 div.mr {
     margin-right: 30px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 div img {
+div#content.sub section.sub-content.wcenter .container div#tab08 div img {
   max-width: 100%;
   min-width: 100%;
   margin: 0 0 20px;
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 div strong {
+div#content.sub section.sub-content.wcenter .container div#tab08 div strong {
   display: block;
   font-size: 1.14285714rem;
   font-weight: 600;
@@ -6708,12 +6856,12 @@ body div#content.sub section.sub-content.wcenter .container div#tab08 div strong
   text-align: left;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab08 div strong {
+  div#content.sub section.sub-content.wcenter .container div#tab08 div strong {
     font-size: 28px;
     margin: 0 0 10px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 div strong span {
+div#content.sub section.sub-content.wcenter .container div#tab08 div strong span {
   display: inline-block;
   text-align: center;
   vertical-align: top;
@@ -6726,14 +6874,14 @@ body div#content.sub section.sub-content.wcenter .container div#tab08 div strong
   width: 60px;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab08 div strong span {
+  div#content.sub section.sub-content.wcenter .container div#tab08 div strong span {
     margin: 7px 20px 0 0;
     font-size: 16px;
     text-align: center;
     padding: 3px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 div p {
+div#content.sub section.sub-content.wcenter .container div#tab08 div p {
   position: relative;
   text-align: left;
   margin: 0;
@@ -6742,12 +6890,12 @@ body div#content.sub section.sub-content.wcenter .container div#tab08 div p {
   font-size: 1rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab08 div p {
+  div#content.sub section.sub-content.wcenter .container div#tab08 div p {
     padding: 0 0 0 80px;
     font-size: 16px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div#tab08 div p span {
+div#content.sub section.sub-content.wcenter .container div#tab08 div p span {
   position: absolute;
   left: 0;
   top: -4px;
@@ -6762,7 +6910,7 @@ body div#content.sub section.sub-content.wcenter .container div#tab08 div p span
   width: 60px;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div#tab08 div p span {
+  div#content.sub section.sub-content.wcenter .container div#tab08 div p span {
     position: absolute;
     left: 0;
     top: -4px;
@@ -7543,25 +7691,25 @@ body div#content.sub section.sub-content.comm .container div#tab02 dl dd:before 
     display: none;
   }
 }
-body div#content.sub section.sub-content.comm .container div#tab03 {
+section.sub-content.comm .container div#tab03 {
   position: relative;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03 {
+  section.sub-content.comm .container div#tab03 {
     padding: 0 0 110px 0;
   }
 }
-body div#content.sub section.sub-content.comm .container div#tab03 h3 {
+section.sub-content.comm .container div#tab03 h3 {
   text-align: center;
   font-size: 1.42857143rem;
   position: relative;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03 h3 {
+  section.sub-content.comm .container div#tab03 h3 {
     text-align: left;
   }
 }
-body div#content.sub section.sub-content.comm .container div#tab03 h3::before {
+section.sub-content.comm .container div#tab03 h3::before {
   content: "";
   height: 0.21428571rem;
   width: 1.28571429rem;
@@ -7570,7 +7718,7 @@ body div#content.sub section.sub-content.comm .container div#tab03 h3::before {
   background: #64BFAA;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03 h3::before {
+  section.sub-content.comm .container div#tab03 h3::before {
     display: inline-block;
     position: relative;
     top: 2px;
@@ -7579,7 +7727,7 @@ body div#content.sub section.sub-content.comm .container div#tab03 h3::before {
     margin: 0 10px 0 0;
   }
 }
-body div#content.sub section.sub-content.comm .container div#tab03::after {
+section.sub-content.comm .container div#tab03::after {
   content: "";
   display: block;
   width: 15.48928571rem;
@@ -7588,7 +7736,7 @@ body div#content.sub section.sub-content.comm .container div#tab03::after {
   background: url("../images/narae.svg") no-repeat center / 100% 100%;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03::after {
+  section.sub-content.comm .container div#tab03::after {
     width: 376.2px;
     height: 259.78px;
     position: absolute;
@@ -7596,57 +7744,58 @@ body div#content.sub section.sub-content.comm .container div#tab03::after {
     bottom: 0;
   }
 }
-body div#content.sub section.sub-content.comm .container div#tab03 dl {
+section.sub-content.comm .container div#tab03 dl {
   margin: 1.42857143rem 0;
   padding: 1.42857143rem 0;
   border-bottom: 1px dotted #999;
 }
-body div#content.sub section.sub-content.comm .container div#tab03 dl:last-of-type {
+section.sub-content.comm .container div#tab03 dl:last-of-type {
   border: none;
 }
-body div#content.sub section.sub-content.comm .container div#tab03 dl dt {
+section.sub-content.comm .container div#tab03 dl dt {
   float: left;
 }
-body div#content.sub section.sub-content.comm .container div#tab03 dl dt h4 {
+section.sub-content.comm .container div#tab03 dl dt h4 {
   position: relative;
   margin: 0;
   padding: 0;
   font-size: 1.57142857rem;
   color: #30A087;
 }
-body div#content.sub section.sub-content.comm .container div#tab03 dl dd {
+section.sub-content.comm .container div#tab03 dl dd {
   font-size: 1.42857143rem;
   margin: 0 0 0 5.71428571rem;
   z-index: 100;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03 dl dd {
+  section.sub-content.comm .container div#tab03 dl dd {
     margin: 0 0 0 130px;
   }
 }
-body div#content.sub section.sub-content.comm .container div#tab03 dl dd h5 {
+section.sub-content.comm .container div#tab03 dl dd h5 {
   margin: 0;
   padding: 0;
   font-size: 1.42857143rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03 dl dd h5 {
+  section.sub-content.comm .container div#tab03 dl dd h5 {
     display: inline-block;
     vertical-align: top;
     margin-right: 50px;
+    min-width: 60px;
   }
 }
-body div#content.sub section.sub-content.comm .container div#tab03 dl dd p {
+section.sub-content.comm .container div#tab03 dl dd p {
   margin: 0 0 0.71428571rem;
   word-break: keep-all;
   font-size: 1.14285714rem;
 }
 @media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03 dl dd p {
+  section.sub-content.comm .container div#tab03 dl dd p {
     display: inline-block;
   }
 }
-body div#content.sub section.sub-content.comm .container div#tab03 dl dd p i {
+section.sub-content.comm .container div#tab03 dl dd p i {
   display: block;
   font-style: normal;
 }
@@ -8327,6 +8476,38 @@ body div#content.sub section.sub-content.dm .container div.infotext {
 body div#content.sub section.sub-content.dm .container div.infotext p {
   margin: 0;
   padding: 0;
+}
+section.sub-content.dm .container div.infotext2 {
+  text-align: left;
+  word-break: keep-all;
+  margin-bottom: 1.42857143rem;
+  font-size: 1.14285714rem;
+}
+section.sub-content.dm .container div.infotext2 p {
+  position: relative;
+  padding-left: 14px;
+}
+section.sub-content.dm .container div.infotext2 p::before {
+  content: "·";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 8x;
+}
+section.sub-content.dm .container div.infotext2 div {
+  padding: 0 0 0 30px;
+}
+section.sub-content.dm .container div.infotext2 div span {
+  display: block;
+  position: relative;
+  padding-left: 14px;
+}
+section.sub-content.dm .container div.infotext2 div span::before {
+  content: "-";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 8x;
 }
 body div#content.sub section.sub-content.dm .container div.shop {
   display: flex;

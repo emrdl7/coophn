@@ -3860,7 +3860,7 @@ body div#content.sub section.sub-content.wcenter .container ul.tab {
     }
   
     @media all and (min-width: 1200px) {
-      width: 160px;
+      width: 148px;
   
       &:nth-child(odd) {
         border-radius: 0;
@@ -4377,35 +4377,221 @@ body div#content.sub section.sub-content.work .container div.work-project p.text
 body div#content.sub section.sub-content.work .container div.work-project p.img {
   position: relative;
   font-size: 0;
-  padding-top: 142%;
+  padding-bottom: 142%;
   background: url("/wp/assets/source/images/img-project.png") no-repeat center / 100% auto;
+  // background: url("../images/img-project.png") no-repeat center / 100% auto;
+
 }
+
+
+
+
+
+
+
+
 body div#content.sub section.sub-content.work .container div.work-project p.img a {
   display: block;
-  position: absolute;
-  left: 50%;
-  top: 2%;
-  width: 14%;
-  padding-top: 14%;
+  position:absolute;
+  top:3.5%;
+  left:50%;
+  transform:translateX(-50%);
+  background:#ccc;
+  width:10%;
+  aspect-ratio: 1 / 1;
+  border-radius:50%;
+  font-size:11px;
+
+
+  @media all and (min-width: 1200px) {
+    font-size:16px;
+    font-weight:600;
 }
+}
+
+body div#content.sub section.sub-content.work .container div.work-project p.img a span {
+  display:block;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translateY(-50%) translateX(-50%);
+  word-break:keep-all;
+}
+
 body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(1) {
-  margin-left: -43.3%;
+  margin-left:-43%;
+  background:#ffa3b8;
 }
 body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(2) {
-  margin-left: -28.2%;
+  margin-left:-31%;
+  background:#7fd5da;
 }
 body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(3) {
-  margin-left: -13.4%;
+  margin-left:-19%;
+  background:#b2a3f4;
 }
 body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(4) {
-  margin-left: 1.4%;
+  margin-left:-7%;
+  background:#fed09a;
 }
 body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(5) {
-  margin-left: 16.4%;
+  margin-left:5%;
+  background:#cc9adc;
 }
 body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(6) {
-  margin-left: 31.6%;
+  margin-left:17%;
+  background:#94c5ff;
 }
+body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(7) {
+  margin-left:29%;
+  background:#7fd5da;
+}
+body div#content.sub section.sub-content.work .container div.work-project p.img a:nth-child(8) {
+  margin-left:42%;
+  background:#ffa3b8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body div#content.sub section.sub-content.work .container div.dream-project {
+
+  h3 {
+    text-align: center;
+    font-size: 1.42857143rem;
+    position: relative;
+  
+    @media all and (min-width: 1200px) {
+        text-align: left;
+    }
+  
+    &::before {
+        content: "";
+        height: 0.21428571rem;
+        width: 1.28571429rem;
+        margin: 0.71428571rem auto;
+        display: block;
+        background: #64BFAA;
+  
+        @media all and (min-width: 1200px) {
+            display: inline-block;
+            position: relative;
+            top: 2px;
+            width: 3px;
+            height: 16px;
+            margin: 0 10px 0 0;
+        }
+    }
+  }
+
+  p.text {
+    font-size:14px;
+    padding:0 0 0 14px;
+    margin:0 0 30px;
+  
+    @media all and (min-width: 1200px) {
+        font-size:16px;
+    }
+  }
+  
+
+}
+
+
+
+
+
+body div#content.sub section.sub-content.work .container div.dream-project p.img {
+  position: relative;
+  font-size: 0;
+  padding-bottom: 142%;
+  background: url("/wp/assets/source/images/img-project.png") no-repeat center / 100% auto;
+  // background: url("../images/img-project.png") no-repeat center / 100% auto;
+
+}
+
+
+
+
+
+
+
+
+body div#content.sub section.sub-content.work .container div.dream-project p.img {
+  position: relative;
+  font-size: 0;
+  padding-bottom: 25%;
+  background: url("/wp/assets/source/images/img-dream.png") no-repeat center / 100% auto;
+  // background: url("../images/img-dream.png") no-repeat center top / 100% auto;
+
+}
+
+
+body div#content.sub section.sub-content.work .container div.dream-project p.img a {
+  display: block;
+  position:absolute;
+  top:3.5%;
+  left:50%;
+  transform:translateX(-50%);
+  background:#ccc;
+  width:10%;
+  aspect-ratio: 1 / 1;
+  border-radius:50%;
+  font-size:11px;
+  text-align:center;
+
+
+  @media all and (min-width: 1200px) {
+    font-size:16px;
+    font-weight:600;
+}
+}
+
+body div#content.sub section.sub-content.work .container div.dream-project p.img a span {
+  display:block;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translateY(-50%) translateX(-50%);
+  word-break:keep-all;
+}
+
+body div#content.sub section.sub-content.work .container div.dream-project p.img a span u {
+  text-decoration:none;
+  display:block;
+}
+
+body div#content.sub section.sub-content.work .container div.dream-project p.img a:nth-child(1) {
+  margin-left:-36%;
+  background:#ffa3b8;
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img a:nth-child(2) {
+  margin-left:-18%;
+  background:#7fd5da;
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img a:nth-child(3) {
+  margin-left:0;
+  background:#b2a3f4;
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img a:nth-child(4) {
+  margin-left:18%;
+  background:#fed09a;
+}
+body div#content.sub section.sub-content.work .container div.dream-project p.img a:nth-child(5) {
+  margin-left:36%;
+  background:#cc9adc;
+}
+
+
+
 
 
 
@@ -4903,6 +5089,10 @@ body div#content.sub section.sub-content.work .container div#tab02 {
                 vertical-align: top;
                 margin-left: 0;
                 width: calc(50% - 160px);
+
+                &.full {
+                  width: calc(100% - 160px);
+                }
             }
 
             
@@ -5007,111 +5197,128 @@ body div#content.sub section.sub-content.work .container div#tab02 {
 
 
 
+    section.sub-content.work {
+      .container {
+
+
+        
+        div#tab03 {
+          position: relative;
+
+          h3 {
+            text-align: center;
+            font-size: 1.42857143rem;
+            position: relative;
+
+            &::before {
+              content: "";
+              height: 0.21428571rem;
+              width: 1.28571429rem;
+              margin: 0.71428571rem auto;
+              display: block;
+              background: #64BFAA;
+            }
+
+            @media all and (min-width: 1200px) {
+              text-align: left;
+
+              &::before {
+                display: inline-block;
+                position: relative;
+                top: 2px;
+                width: 3px;
+                height: 16px;
+                margin: 0 10px 0 0;
+              }
+            }
+          }
+
+          &::after {
+            content: "";
+            display: block;
+            width: 15.48928571rem;
+            height: 10.69642857rem;
+            margin: 0 auto 1.42857143rem;
+            background: url("../images/narae.svg") no-repeat center / 100% 100%;
+
+            @media all and (min-width: 1200px) {
+              width: 376.2px;
+              height: 259.78px;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+            }
+          }
+
+          dl {
+            margin: 1.42857143rem 0;
+            padding: 1.42857143rem 0;
+
+            &:first-of-type {
+              border-bottom: 1px dotted #999;
+            }
+
+            dt {
+              float: left;
+
+              h4 {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                font-size: 1.57142857rem;
+                color: #30A087;
+              }
+            }
+
+            dd {
+              font-size: 1.42857143rem;
+              margin: 0 0 0 5.71428571rem;
+              z-index: 100;
+
+              @media all and (min-width: 1200px) {
+                margin: 0 0 0 130px;
+              }
+
+              h5 {
+                margin: 0;
+                padding: 0;
+                font-size: 1.42857143rem;
+
+                @media all and (min-width: 1200px) {
+                  display: inline-block;
+                  vertical-align: top;
+                  margin-right: 50px;
+                  min-width: 60px;
+                }
+              }
+
+              p {
+                margin: 0 0 0.71428571rem;
+                word-break: keep-all;
+                font-size: 1.14285714rem;
+
+                @media all and (min-width: 1200px) {
+                  display: inline-block;
+                }
+
+                i {
+                  display: block;
+                  font-style: normal;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
 
 
-body div#content.sub section.sub-content.work .container div#tab03 {
-  position: relative;
-}
-body div#content.sub section.sub-content.work .container div#tab03 h3 {
-  text-align: center;
-  font-size: 1.42857143rem;
-  position: relative;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.work .container div#tab03 h3 {
-    text-align: left;
-  }
-}
-body div#content.sub section.sub-content.work .container div#tab03 h3::before {
-  content: "";
-  height: 0.21428571rem;
-  width: 1.28571429rem;
-  margin: 0.71428571rem auto;
-  display: block;
-  background: #64BFAA;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.work .container div#tab03 h3::before {
-    display: inline-block;
-    position: relative;
-    top: 2px;
-    width: 3px;
-    height: 16px;
-    margin: 0 10px 0 0;
-  }
-}
-body div#content.sub section.sub-content.work .container div#tab03::after {
-  content: "";
-  display: block;
-  width: 15.48928571rem;
-  height: 10.69642857rem;
-  margin: 0 auto 1.42857143rem;
-  background: url("../images/narae.svg") no-repeat center / 100% 100%;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.work .container div#tab03::after {
-    width: 376.2px;
-    height: 259.78px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-}
-body div#content.sub section.sub-content.work .container div#tab03 dl {
-  margin: 1.42857143rem 0;
-  padding: 1.42857143rem 0;
-}
-body div#content.sub section.sub-content.work .container div#tab03 dl:first-of-type {
-  border-bottom: 1px dotted #999;
-}
-body div#content.sub section.sub-content.work .container div#tab03 dl dt {
-  float: left;
-}
-body div#content.sub section.sub-content.work .container div#tab03 dl dt h4 {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-size: 1.57142857rem;
-  color: #30A087;
-}
-body div#content.sub section.sub-content.work .container div#tab03 dl dd {
-  font-size: 1.42857143rem;
-  margin: 0 0 0 5.71428571rem;
-  z-index: 100;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.work .container div#tab03 dl dd {
-    margin: 0 0 0 130px;
-  }
-}
-body div#content.sub section.sub-content.work .container div#tab03 dl dd h5 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.42857143rem;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.work .container div#tab03 dl dd h5 {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 50px;
-    min-width: 60px;
-  }
-}
-body div#content.sub section.sub-content.work .container div#tab03 dl dd p {
-  margin: 0 0 0.71428571rem;
-  word-break: keep-all;
-  font-size: 1.14285714rem;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.work .container div#tab03 dl dd p {
-    display: inline-block;
-  }
-}
-body div#content.sub section.sub-content.work .container div#tab03 dl dd p i {
-  display: block;
-  font-style: normal;
-}
+
+
+
+
+
 body div#content.sub section.sub-content.work .container div#tab04 {
   position: relative;
   padding: 0 0 4.28571429rem;
@@ -5356,6 +5563,19 @@ body div#content.sub section.sub-content.wcenter .container div.project p.img.im
 body div#content.sub section.sub-content.wcenter .container div.project p.img.img18 {
   background: url("/wp/assets/source/images/img-wcenter18.jpg") no-repeat center / cover;
 }
+body div#content.sub section.sub-content.wcenter .container div.project p.img.img19 {
+  background: url("/wp/assets/source/images/img-wcenter19.jpg") no-repeat center / cover;
+}
+body div#content.sub section.sub-content.wcenter .container div.project p.img.img20 {
+  background: url("/wp/assets/source/images/img-wcenter20.jpg") no-repeat center / cover;
+}
+
+body div#content.sub section.sub-content.wcenter .container div.project p.img.img21 {
+  background: url("/wp/assets/source/images/img-wcenter21.jpg") no-repeat center / cover;
+}
+
+
+
 body div#content.sub section.sub-content.wcenter .container div.project > ul {
   list-style: none;
   padding: 0;
@@ -5439,102 +5659,131 @@ body div#content.sub section.sub-content.wcenter .container div.project > ul li 
     font-size: 16px;
   }
 }
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule {
-  position: relative;
-  margin: 0 0 2.85714286rem;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule {
-    margin: 0 0 60px;
-  }
-}
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule p.title i {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-style: normal;
-  width: 2.85714286rem;
-  line-height: 2.85714286rem;
-  background: #74C6BE;
-  text-align: center;
-  border-radius: 0.71428571rem;
-  font-size: 1.14285714rem;
-  font-weight: 600;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule p.title i {
-    font-size: 26px;
-    width: 56px;
-    line-height: 56px;
-  }
-}
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule p.title strong {
-  display: block;
-  font-weight: 600;
-  font-size: 1.28571429rem;
-  padding: 0 0 0 3.57142857rem;
-  margin: 0 0 0.71428571rem;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule p.title strong {
-    font-size: 26px;
-    padding: 0 0 0 70px;
-    margin: 0 0 20px;
-  }
-}
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule p.title strong small {
-  display: block;
-  font-weight: 400;
-  font-size: 1rem;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule p.title strong small {
-    font-size: 16px;
-  }
-}
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul {
-  border-radius: 0.71428571rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-size: 0;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul {
-    background: #F4F4F4;
-    padding: 40px 40px 10px;
-  }
-}
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul li {
-  text-align: left;
-  margin: 0 0 1.42857143rem;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul li {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 0 30px;
-    width: calc((100% - 68px) / 3);
-    margin-right: 34px;
-  }
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul li:nth-child(3n),
-  body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul li:last-child {
-    margin-right: 0;
-  }
-}
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul li strong {
-  display: block;
-  font-size: 1.14285714rem;
-  font-weight: 600;
-  margin: 0.71428571rem 0 0;
-}
-body div#content.sub section.sub-content.wcenter .container div.project div.schedule ul li p.text {
-  font-size: 1rem;
-  margin: 0;
-  word-break: keep-all;
-}
+
+
+
+
+    section.sub-content.wcenter {
+      .container {
+        div.project {
+
+          div.schedule {
+            position: relative;
+            margin: 0 0 2.85714286rem;
+            
+            @media all and (min-width: 1200px) {
+              margin: 0 0 60px;
+            }
+            
+            p.title {
+              i {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-style: normal;
+                width: 2.85714286rem;
+                line-height: 2.85714286rem;
+                background: #74C6BE;
+                text-align: center;
+                border-radius: 0.71428571rem;
+                font-size: 1.14285714rem;
+                font-weight: 600;
+                
+                @media all and (min-width: 1200px) {
+                  font-size: 26px;
+                  width: 56px;
+                  line-height: 56px;
+                }
+              }
+              
+              strong {
+                display: block;
+                font-weight: 600;
+                font-size: 1.28571429rem;
+                padding: 0 0 0 3.57142857rem;
+                margin: 0 0 0.71428571rem;
+                
+                @media all and (min-width: 1200px) {
+                  font-size: 26px;
+                  padding: 0 0 0 70px;
+                  margin: 0 0 20px;
+                }
+                
+                small {
+                  display: block;
+                  font-weight: 400;
+                  font-size: 1rem;
+                  
+                  @media all and (min-width: 1200px) {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+            
+            ul {
+              border-radius: 0.71428571rem;
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              text-align: center;
+              font-size: 0;
+              
+              @media all and (min-width: 1200px) {
+                background: #F4F4F4;
+                padding: 40px 40px 10px;
+              }
+              
+              li {
+                text-align: left;
+                margin: 0 0 1.42857143rem;
+                
+                @media all and (min-width: 1200px) {
+                  display: inline-block;
+                  vertical-align: top;
+                  margin: 0 0 30px;
+                  width: calc((100% - 68px) / 3);
+                  margin-right: 34px;
+                }
+                
+                &:nth-child(3n), &:last-child {
+                  @media all and (min-width: 1200px) {
+                    margin-right: 0;
+                  }
+                }
+                
+                strong {
+                  display: block;
+                  font-size: 1.14285714rem;
+                  font-weight: 600;
+                  margin: 0.71428571rem 0 0;
+                }
+                
+                p.text {
+                  font-size: 1rem;
+                  margin: 0;
+                  word-break: keep-all;
+                }
+              }
+            }
+
+            &.etc {
+
+            
+              p.title {
+                i {
+
+                  background: #d8c2eb;
+
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
 
 
 
@@ -5555,12 +5804,7 @@ body div#content.sub section.sub-content.wcenter .container div.project div.sche
 
 
 
-
-
-
-
-body {
-  div#content.sub section.sub-content.wcenter .container div#tab06 {
+section.sub-content.wcenter .container div#tab06 {
 
 
 
@@ -7016,7 +7260,7 @@ body {
     }
   }
 
-}
+
 
 
 
@@ -7907,113 +8151,139 @@ body div#content.sub section.sub-content.comm .container div#tab02 dl dd:before 
     display: none;
   }
 }
-body div#content.sub section.sub-content.comm .container div#tab03 {
-  position: relative;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03 {
-    padding: 0 0 110px 0;
+
+
+
+
+
+
+
+  section.sub-content.comm {
+    .container {
+      div#tab03 {
+        position: relative;
+
+        @media all and (min-width: 1200px) {
+          padding: 0 0 110px 0;
+        }
+
+        h3 {
+          text-align: center;
+          font-size: 1.42857143rem;
+          position: relative;
+
+          @media all and (min-width: 1200px) {
+            text-align: left;
+          }
+
+          &::before {
+            content: "";
+            height: 0.21428571rem;
+            width: 1.28571429rem;
+            margin: 0.71428571rem auto;
+            display: block;
+            background: #64BFAA;
+
+            @media all and (min-width: 1200px) {
+              display: inline-block;
+              position: relative;
+              top: 2px;
+              width: 3px;
+              height: 16px;
+              margin: 0 10px 0 0;
+            }
+          }
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          width: 15.48928571rem;
+          height: 10.69642857rem;
+          margin: 0 auto 1.42857143rem;
+          background: url("../images/narae.svg") no-repeat center / 100% 100%;
+
+          @media all and (min-width: 1200px) {
+            width: 376.2px;
+            height: 259.78px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+          }
+        }
+
+        dl {
+          margin: 1.42857143rem 0;
+          padding: 1.42857143rem 0;
+          border-bottom: 1px dotted #999;
+
+          &:last-of-type {
+            border: none;
+          }
+
+          dt {
+            float: left;
+
+            h4 {
+              position: relative;
+              margin: 0;
+              padding: 0;
+              font-size: 1.57142857rem;
+              color: #30A087;
+            }
+          }
+
+
+          dd {
+            font-size: 1.42857143rem;
+            margin: 0 0 0 5.71428571rem;
+            z-index: 100;
+
+            @media all and (min-width: 1200px) {
+              margin: 0 0 0 130px;
+            }
+
+            h5 {
+              margin: 0;
+              padding: 0;
+              font-size: 1.42857143rem;
+
+              @media all and (min-width: 1200px) {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 50px;
+                min-width: 60px;
+              }
+            }
+
+            p {
+              margin: 0 0 0.71428571rem;
+              word-break: keep-all;
+              font-size: 1.14285714rem;
+
+              @media all and (min-width: 1200px) {
+                display: inline-block;
+              }
+
+              i {
+                display: block;
+                font-style: normal;
+              }
+            }
+          }
+        }
+      }
+    }
   }
-}
-body div#content.sub section.sub-content.comm .container div#tab03 h3 {
-  text-align: center;
-  font-size: 1.42857143rem;
-  position: relative;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03 h3 {
-    text-align: left;
-  }
-}
-body div#content.sub section.sub-content.comm .container div#tab03 h3::before {
-  content: "";
-  height: 0.21428571rem;
-  width: 1.28571429rem;
-  margin: 0.71428571rem auto;
-  display: block;
-  background: #64BFAA;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03 h3::before {
-    display: inline-block;
-    position: relative;
-    top: 2px;
-    width: 3px;
-    height: 16px;
-    margin: 0 10px 0 0;
-  }
-}
-body div#content.sub section.sub-content.comm .container div#tab03::after {
-  content: "";
-  display: block;
-  width: 15.48928571rem;
-  height: 10.69642857rem;
-  margin: 0 auto 1.42857143rem;
-  background: url("../images/narae.svg") no-repeat center / 100% 100%;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03::after {
-    width: 376.2px;
-    height: 259.78px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-}
-body div#content.sub section.sub-content.comm .container div#tab03 dl {
-  margin: 1.42857143rem 0;
-  padding: 1.42857143rem 0;
-  border-bottom: 1px dotted #999;
-}
-body div#content.sub section.sub-content.comm .container div#tab03 dl:last-of-type {
-  border: none;
-}
-body div#content.sub section.sub-content.comm .container div#tab03 dl dt {
-  float: left;
-}
-body div#content.sub section.sub-content.comm .container div#tab03 dl dt h4 {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-size: 1.57142857rem;
-  color: #30A087;
-}
-body div#content.sub section.sub-content.comm .container div#tab03 dl dd {
-  font-size: 1.42857143rem;
-  margin: 0 0 0 5.71428571rem;
-  z-index: 100;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03 dl dd {
-    margin: 0 0 0 130px;
-  }
-}
-body div#content.sub section.sub-content.comm .container div#tab03 dl dd h5 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.42857143rem;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03 dl dd h5 {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 50px;
-  }
-}
-body div#content.sub section.sub-content.comm .container div#tab03 dl dd p {
-  margin: 0 0 0.71428571rem;
-  word-break: keep-all;
-  font-size: 1.14285714rem;
-}
-@media all and (min-width: 1200px) {
-  body div#content.sub section.sub-content.comm .container div#tab03 dl dd p {
-    display: inline-block;
-  }
-}
-body div#content.sub section.sub-content.comm .container div#tab03 dl dd p i {
-  display: block;
-  font-style: normal;
-}
+
+
+
+
+
+
+
+
+
 body div#content.sub section.sub-content.comm .container div#tab04 {
   position: relative;
   padding: 0 0 4.28571429rem;
@@ -8682,6 +8952,8 @@ body div#content.sub section.sub-content.dm .container h3 {
     font-size: 20px;
   }
 }
+
+
 body div#content.sub section.sub-content.dm .container div.infotext {
   text-align: center;
   word-break: keep-all;
@@ -8692,6 +8964,55 @@ body div#content.sub section.sub-content.dm .container div.infotext p {
   margin: 0;
   padding: 0;
 }
+
+
+
+section.sub-content {
+  &.dm {
+    .container {
+      div.infotext2 {
+        text-align:left;
+        word-break:keep-all;
+        margin-bottom: 1.42857143rem;
+        font-size: 1.14285714rem;
+
+        p {
+          position:relative;
+          padding-left:14px;
+
+          &::before {
+            content:"·";
+            display:block;  
+            position:absolute;
+            left:0;
+            top:8x;
+          }
+        }
+
+        div {
+          padding:0 0 0 30px;
+          
+          span {
+            display:block;
+            position:relative;
+            padding-left:14px;
+  
+            &::before {
+              content:"-";
+              display:block;  
+              position:absolute;
+              left:0;
+              top:8x;
+            }
+          }}
+
+
+      }
+    }
+  }
+}
+
+
 body div#content.sub section.sub-content.dm .container div.shop {
   display: flex;
   justify-content: center;
