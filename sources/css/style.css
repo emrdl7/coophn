@@ -1618,6 +1618,11 @@ body div#content.main section.main-media .container div.facebook ul li a i {
   font-style: normal;
   color: #555;
 }
+body div#content.main section.main-media .container div.facebook div.no-content {
+  background: #ccc;
+  height: 230px;
+  background: url(/wp/assets/source/images/insta_tmp.png) no-repeat center / cover;
+}
 body div#content.main section.main-media .container div.facebook > a {
   font-size: 0;
   position: absolute;

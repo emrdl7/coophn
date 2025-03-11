@@ -138,129 +138,348 @@
         <!-- E:header -->
         <!-- S:mainContent -->
 
-
+        <!-- S:mainContent -->
+        <div id="content" class="main" tabindex="-1">
+            <a name="contentanker"></a>
+            <section class="main-issue">
+                <h2 class="sr-only">메인 이슈이미지 슬라이더</h2>
         
-
-
-
-
-
-
+                <div class="main-slider">
         
-
-
-        <div id="content" class="sub">
-
-            <section class="subheader">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                    <c:forEach items="${popupList}" var="item">
+                        <c:forEach items="${item.pop_pc_image_list}" var="image">
+        
+                            <div data-pc_image_url="${image.realViewUrl}"
+                                 data-mobile_image_url="${item.pop_mobile_image_list[0].realViewUrl}">
+                                <c:choose>
+        
+                                    <c:when test="${item.pop_url == null}">
+                                        <a><img src="${image.realViewUrl}" alt="" ></a>
+        
+                                    </c:when>
+        
+        
+                                    <c:otherwise>
+                                        <a href="${item.pop_url}" target="_blank">
+                                            <img src="${image.realViewUrl}" alt="" >
+                                        </a>
+                                    </c:otherwise>
+        
+                                </c:choose>
+                            </div>
+                        </c:forEach>
+        
+                    </c:forEach>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                </div>
+        
+                <button class="main-prev" title="다음슬라이드"><i class='bx bx-chevron-left'></i>이전슬라이드</button>
+                <button class="main-next" title="이전슬라이드"><i class='bx bx-chevron-right'></i>다음슬라이드</button>
+        
+        
+        
+            </section>
+        
+        
+            <section class="main-links">
                 <div class="container">
-                    <h2>희망나래일터</h2>
-
-<wp:include id="POST000000000000042"/>
+                    <h2 class="sr-only">바로가기 링크</h2>
+        
+                            <a href="/front/menu/MENU000000000000034/" title="사회적협동조합">사회적협동조합<span>희망나래</span></a>
+                            <a href="/front/menu/MENU000000000000060/" title="희망나래활동센터">희망나래<span>활동센터</span></a>
+                            <a href="/front/menu/MENU000000000000055/" title="희망나래일터">희망나래<span>일터</span></a>
+                            <a href="/front/menu.wp?menuId=MENU000000000000291" title="새창으로 열립니다">제주시동백<span>주간활동센터</span></a>
+                            <!-- <a href="http://www.jejucc.or.kr/" target="_blank" title="새창으로 열립니다">제주시장애인지역사회<span>통합돌봄지원센터</span></a> -->
+                
+                            <a href="/front/menu/MENU000000000000087/" title="희망나래미디어카페">희망나래<span>꿈터</span></a>
                 </div>
             </section>
-
-            <section class="sub-content work">
+            <section class="main-contents">
                 <div class="container">
+        
+        
+                    <div class="notice">
+        
+                        <div id="tab01" class="tab-content active">
+                            <a
+                                    href="/front/board/theme/list.wp?boardId=notice&menuId=MENU000000000000047"
+                                    class="tablink active"
+                                    data="tab01">공지사항
+                            </a>
+                            <ul class="list">
+                                <wp:boardLatest
+                                        boardId="notice"
+                                        skinName="notice"
+                                        linkUrl="/front/board/theme/list.wp"
+                                        menuId="MENU000000000000047"
+                                        moreLink="/front/board/theme/view.wp"/>
+                            </ul>
+                            <a
+                                    href="/front/board/theme/list.wp?boardId=notice&menuId=MENU000000000000047"
+                                    class="more">
+                                <i class="bx bx-plus"></i>
+                            </a>
+                        </div>
+                        <div id="tab02" class="tab-content">
+                            <a
+                                    href="/front/board/theme/list.wp?boardId=job&menuId=MENU000000000000074"
+                                    class="tablink"
+                                    data="tab02">채용정보
+                            </a>
+                            <ul class="list">
+                                <wp:boardLatest
+                                        boardId="job"
+                                        skinName="notice"
+                                        linkUrl="/front/board/theme/list.wp"
+                                        menuId="MENU000000000000074"
+                                        listCount="5"
+                                        moreLink="/front/board/theme/view.wp"/>
+                            </ul>
+                            <a
+                                    href="/front/board/theme/list.wp?boardId=job&menuId=MENU000000000000074"
+                                    class="more">
+                                <i class="bx bx-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+        
+        
+        
+        
+                    <div class="notice press">
+        
+                        <div id="tab03" class="tab-content active">
+                            <a
+                                    href="/front/board/theme/list.wp?boardId=media&menuId=MENU000000000000042"
+                                    class="tablink active"
+                                    data="tab03">언론보도
+                            </a>
+                            <ul class="list">
+        
+                                <wp:boardLatest boardId="media" skinName="notice" linkUrl="/front/board/theme/list.wp" menuId ="MENU000000000000042"  moreLink="/front/board/theme/view.wp"/>
+                            </ul>
+                            <a
+                                    href="/front/board/theme/list.wp?boardId=media&menuId=MENU000000000000042"
+                                    class="more">
+                                <i class="bx bx-plus"></i>
+                            </a>
+                        </div>
+                        <div id="tab04" class="tab-content">
+                            <a
+                                    href="/front/board/theme/list.wp?boardId=letter&menuId=MENU000000000000050"
+                                    class="tablink"
+                                    data="tab04">소식지
+                            </a>
+                            <ul class="list">
+        
+                                <wp:boardLatest boardId="letter" skinName="notice" linkUrl="/front/board/theme/list.wp" menuId ="MENU000000000000050" listCount="5" moreLink="/front/board/theme/view.wp"/>
+                            </ul>
+                            <a
+                                    href="/front/board/theme/list.wp?boardId=letter&menuId=MENU000000000000050"
+                                    class="more">
+                                <i class="bx bx-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+        
+        
+        
+                </div>
+            </section>
+        
+        
+        
+            <section class="main-media">
+                <div class="container">
+                    <div class="gallery">
+                        <h2>희망나래이야기</h2>
+        
+                        <div class="data">
+                            <div class="gall-slider">
+                                <wp:boardLatest boardId="gallery" skinName="gallery" listCount="2" linkUrl="/front/board/theme/list.wp" menuId ="MENU000000000000049"  moreLink="/front/board/theme/view.wp"/>
+                            </div>
+        
+                            <button class="gall-prev" title="다음슬라이드"><i class='bx bx-chevron-left'></i>이전슬라이드</button>
+                            <button class="gall-next" title="이전슬라이드"><i class='bx bx-chevron-right'></i>다음슬라이드</button>
+        
+        
+                            <a href="/front/board/theme/list.wp?boardId=gallery&menuId=MENU000000000000049"><i class='bx bx-plus'></i>갤러리 게시판 바로가기</a>
+                        </div>
+        
+                    </div>
+        
+                    <div class="facebook">
+                        <h2>인스타그램</h2>
+                        <ul id="faceBookFeed">
+        
+                        </ul>
+                        <a href="https://www.instagram.com/coophn/" target="_blank"><i class='bx bx-plus'></i>인스타그램 페이지 바로가기</a>
 
-                    <wp:include id="POST000000000000023"/>
 
-
-
-
-
-
-
-
-                    <div class="dream-project">
-
-                        <h3>근로장애인권리</h3>
-                        <p class="text">
-                            개인정보보호, 학대예방 및 인권보장, 고충처리, 근로장애인 자치회의, 보호자 교육 및 모임
-                        </p>
-
-                        <h3>직업재활서비스</h3>
-                        <p class="text">
-                            보호고용, 직업상담, 직업평가, 직무분석, 적합성비교분석, 사례회의, 직업재활 계획 수립 및 개별서비스 제공, 취업
-                        </p>
-
-                        <h3>재활프로그램</h3>
-                        <p class="text">
-                            직업적응훈련, 문제해결훈련, 직무기능향상훈련, 지역사회자원활용, 희망나래 플라스틱 보물찾기 탐험대, 욕구 및 만족도 조사
-                        </p>
-
-                        <h3>생산판매사업</h3>
-                        <p class="text">
-                            영상미디어사업, 카페테리아사업, 이동스팀세차사업, 제로점빵, 품질관리, 홍보사업, 고객관리 및 개발
-                        </p>
-
-                        <h3>자원관리</h3>
-                        <p class="text">
-                            자원봉사자관리, 후원사업, 외부자원개발, 지역사회 네트워크 사업, 시설개방사업
-                        </p>
-
-                        <h3>인적자원관리</h3>
-                        <p class="text">
-                            시설운영위원회, 직원교육 및 연수
-                        </p>
-
-                        <h3>시설관리</h3>
-                        <p class="text">
-                            비품관리, 시설안전 보건관리 및 소방관리, 위생관리, 냉·난방설비관리
-                        </p>
-
-                        <h3>운영관리</h3>
-                        <p class="text">
-                            시설의 미션·비전 및 장·단기 발전계획 수립, 연간 사업(운영) 계획 수립 및 평가, 월 사업계획 수립 및 사업보고, 인사관리, 복무관리, 회계관리, 문서관리, 각종회의, 직원복리후생
-                        </p>
-
-                        <h3>기능보강사업</h3>
-                        <p class="text">
-                            이동스팀세차 장비보강
-                        </p>
-
-                        
-
-
-
-                        <p class="img">
-                            <a href="/front/menu/MENU000000000000094/"><span>이동<u>스팀세차</u></span></a>
-                            <a href="/front/menu/MENU000000000000097/"><span>동영상<u>제작서비스</u></span></a>
-                            <a href="/front/menu/MENU000000000000288/"><span>제과제빵</span></a>
-                            <a href="/front/menu/MENU000000000000297/"><span>제로점빵</span></a>
-                            <a href="/front/menu/MENU000000000000290/"><span>제주가<u>오란다</u></span></a>
-
-                            희망나래일터의 각종 인증서 사진
-                        </p>
-
+                        <div class="no-content">
                     </div>
 
-
-
-
-
-
-
-
-
-				<ul class="sidebar">
-        <li>
-          <a href="/front/board/theme/list.wp?boardId=printing&menuId=MENU000000000000043" target="_self" class="printing" title="프린팅 포트폴리오">
-            <strong>PRINTING</strong>Portfolio</a>
-        </li>
-        <li>
-          <a href="http://www.hncoop.co.kr/" target="_blank" class="gift" title="기프트 쇼핑몰 새창열림">
-            <strong>GIFT</strong>Shop</a>
-        </li>
-      </ul>
-
-
-
+                    <!-- <wp:boardLatest boardId="mov" skinName="mov" listCount="1" linkUrl="/front/board/theme/list.wp" menuId ="MENU000000000000049"  moreLink="/front/board/theme/view.wp"/> -->
+        
                 </div>
-
-            </section> 
+            </section>
+        
+        
+        
+            <section class="main-product">
+                <div class="container">
+                    <h2 class="sr-only">희망나래 상품목록</h2>
+        
+                    <dl class="printing">
+                        <dt>
+                            <h3>
+                                PRINTING
+                                <small>
+                                    다양한 인쇄물의 디자인, 출력,
+                                    <u>제본 등 인쇄물의 전반</u>
+                                </small>
+                            </h3>
+                        </dt>
+                        <dd>
+        
+        
+        
+        
+                            <ul>
+        
+                                <li>
+                                    <a href="/front/menu/MENU000000000000043/">
+                                        <img src="/wp/assets/source/images/product01.jpg" alt="인쇄물 샘플 이미지">
+                                    </a>
+                                </li>
+        
+        
+        
+        
+        
+        
+                                <%-- <wp:boardLatest boardId="printing" skinName="printing" listCount="1" linkUrl="/front/board/theme/list.wp" menuId ="MENU000000000000043"  moreLink="/front/board/theme/view.wp"/>--%>
+        
+        
+                            </ul>
+                            <a href="/front/menu/MENU000000000000043/"><i class='bx bx-plus'></i>PRINTING 페이지 바로가기</a>
+        
+        
+        
+        
+                        </dd>
+                    </dl>
+        
+                    <dl class="gift">
+                        <dt>
+                            <h3>
+                                GIFT
+                                <small>
+                                    판촉물, 기념품, 홍보용품
+                                    <u>등을 제작 판매합니다</u>
+                                </small>
+                            </h3>
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <a href="/front/menu/MENU000000000000044/">
+                                        <img src="/wp/assets/source/images/product02.jpg" alt="GIFT 샘플 이미지">
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="/front/menu/MENU000000000000044/"><i class='bx bx-plus'></i>GIFT 페이지 바로가기</a>
+                        </dd>
+                    </dl>
+        
+                    <dl class="stationery">
+                        <dt>
+                            <h3>
+                                제로점빵
+                                <small>
+                                    제주에서 시작하는
+                                    <u>제로웨이스트의 첫발</u>
+                                </small>
+                            </h3>
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <a href="/front/menu/MENU000000000000297/">
+                                        <img src="/wp/assets/source/images/product03.jpg" alt="제로점빵 이미지">
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="/front/menu/MENU000000000000297/"><i class='bx bx-plus'></i>제로점빵 페이지 바로가기</a>
+                        </dd>
+                    </dl>
+        
+        
+                    <dl class="dm">
+                        <dt>
+                            <h3>
+                                제주가오란다
+                                <small>
+                                    우리쌀조청과 건강한 제주 농산물로
+                                    <u>만든 제주가 오란다~</u>
+                                </small>
+                            </h3>
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <a href="/front/menu/MENU000000000000290/">
+                                        <img src="/wp/assets/source/images/product04.jpg" alt="제주가오란다 이미지">
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="/front/menu/MENU000000000000290/"><i class='bx bx-plus'></i>제주가오란다 페이지 바로가기</a>
+                        </dd>
+                    </dl>
+        
+                </div>
+            </section>
+        
+            <section class="site-links">
+                <div class="container">
+                    <h2 class="sr-only">메인 이슈이미지 슬라이더</h2>
+        
+        
+                    <div class="site-slider">
+                        <info:banner group="main"/>
+        
+                    </div>
+        
+                    <button class="site-prev"><i class='bx bx-chevron-left'></i>이전슬라이드</button>
+                    <button class="site-next"><i class='bx bx-chevron-right'></i>다음슬라이드</button>
+        
+        
+                </div>
+            </section>
+        
         </div>
-
-
+        <!-- E:mainContent -->
 
 
 
